@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.pixabay.com/photo/2016/04/24/21/12/blood-donation-1359991_1280.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        nav {
+            background: #c70039;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover, nav ul li a:active {
+            background: darkred;
+        }
+        header {
+            padding: 50px;
+            background: none;
+        }
+        header h1, header p {
+            color: red;
+        }
+        .info-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .info-box {
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .info-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .blood-search { background: #ff5733; }
+        .blood-directory { background: #c70039; }
+        .donation-camps { background: #900c3f; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#blood-types">Blood Types</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#hospital">Hospital Requests</a></li>
+        </ul>
+    </nav>
+    
+    <header id="home">
+        <h1>Donate Blood, Save Lives</h1>
+        <p>Your donation can make a difference.</p>
+    </header>
+    
+    <div class="info-boxes">
+        <a href="blood-search.html" class="info-box blood-search">🔍 Blood Availability Search</a>
+        <a href="blood-directory.html" class="info-box blood-directory">🏥 Blood Bank Directory</a>
+        <a href="donation-camps.html" class="info-box donation-camps">🎪 Blood Donation Camps</a>
+    </div>
+    
+    <section id="donor">
+        <div class="form-container">
+            <h2>Donor Registration</h2>
+            <form action="donor.html">
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Blood Group" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <button type="submit">Register as Donor</button>
+            </form>
+        </div>
+    </section>
+    
+    <section id="hospital">
+        <div class="form-container">
+            <h2>Hospital Blood Request</h2>
+            <form action="hospital.html">
+                <input type="text" placeholder="Hospital Name" required>
+                <input type="text" placeholder="Required Blood Group" required>
+                <input type="tel" placeholder="Contact Number" required>
+                <button type="submit">Request Blood</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
